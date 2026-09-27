@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.8.1">
+	<ItemSettings>
+		<ContentType>MISC</ContentType>
+		<Title>Synaptic A220 ACARS</Title>
+		<Manufacturer/>
+		<Creator>Liz3</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<PackageOrderHint>INSTRUMENT_PATCH</PackageOrderHint>
+	<GloballyOverridenBaseSimFiles>
+		<GloballyOverridenBaseSimFile>\html_ui\Pages\VCockpit\Instruments\a22x\DisplayUnits\instrument.html</GloballyOverridenBaseSimFile>
+		<GloballyOverridenBaseSimFile>\html_ui\Pages\VCockpit\Instruments\a22x\DisplayUnits\instrument.index.js</GloballyOverridenBaseSimFile>
+	</GloballyOverridenBaseSimFiles>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\aliz3-a220-acars\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\aliz3-a220-acars\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="Wasm">
+			<Type Version="0">Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Copys\a220-acars\Wasm\</AssetDir>
+			<OutputDir>modules\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="files">
+			<Type Version="0">Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Copys\a220-acars\files\</AssetDir>
+			<OutputDir>html_ui\pages\vcockpit\instruments\a22x\displayunits\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
+

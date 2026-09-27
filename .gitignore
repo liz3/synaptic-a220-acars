@@ -1,0 +1,10 @@
+node_modules
+out
+a220-acars/Packages
+WasmModule/A220WasmModule/MSFS
+WasmModule/A220WasmModule/.vs
+WasmModule/A220WasmModule/A220WasmModule/MSFS
+a220-acars/PackageSources/Copys/a220-acars/Wasm/A220WasmModule.wasm
+a220-acars/PackageSources/Copys/a220-acars/files/instrument.html
+a220-acars/PackageSources/Copys/a220-acars/files/plugin.js
+a220-acars/_PackageInt/
