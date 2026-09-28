@@ -172,15 +172,15 @@ const EicasTab = ({}) => {
   if (!fmsOne && !fmsTwo) return null;
   if (!message && !activeStation) {
     return anyUnread || dlkUnread ? (
-      <OffsetBox y={881} x={0}>
+      <>
         {anyUnread ? <Flag /> : null}
         {dlkUnread ? <FlagDlk /> : null}
-      </OffsetBox>
+      </>
     ) : null;
   }
   if (!message)
     return (
-      <OffsetBox y={881} x={0}>
+      <>
         {anyUnread ? <Flag /> : null}
         {dlkUnread ? <FlagDlk /> : null}
         <text className="ContentText White" x={635} y={70}>
@@ -213,7 +213,7 @@ const EicasTab = ({}) => {
             </ButtonBlock>
           );
         })}
-      </OffsetBox>
+      </>
     );
 
   const count =
