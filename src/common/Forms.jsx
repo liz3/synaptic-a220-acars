@@ -412,7 +412,7 @@ export const FREETEXT = {
     const out = AcarsService.withClient((cl) =>
       cl.sendTelex(values.STATION, concatFreeText2(values)),
     );
-    return out ? ["menu", AOC] : null;
+    return out ? ["menu", ATS] : null;
   },
   fields: [
     [

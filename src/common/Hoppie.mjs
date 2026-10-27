@@ -1,6 +1,6 @@
 const reroutePdc = message => {
   if (message.cpdlc) {
-    if (message.content.startsWith("FMS") && message.content.includes("REQUEST BEING PROCESSED STANDBY")  && message.content.includes("CLEARANCE CONFIRMED")) {
+    if (message.content.startsWith("FSM") && message.content.includes("REQUEST BEING PROCESSED STANDBY")  && message.content.includes("CLEARANCE CONFIRMED")) {
       message.pdc = {};
       message.subType = "PDC";
       message.cpdlc = undefined;

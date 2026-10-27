@@ -56,9 +56,9 @@ const MessagePage = ({ message: messageIn }) => {
   return <>
     <rect x={2} fill={"#232323"} y={130} height={25} width={730} />
     
-    <UplinkArrow x={10} y={130} up={message.type !== "send"} color={!needsResponse ? "White" : reactUtils.colors.Cyan} />
-    <text className={`ContentText ${needsResponse ? "Cyan" : "White"}`} x={25} y={150}>UTC  {convertUnixToHHMM(new Date(message.ts))}-{message.from}</text>
-    <text className={`ContentText ${needsResponse ? "Cyan" : "White"}`} x={needsResponse ? 660 : 600} y={150}>{needsResponse ? "OPEN" : AcarsService.messageViewStr(message)}</text>
+    <UplinkArrow x={10} y={130} up={message.type !== "send"} color={!needsResponse && message.viewed ? "White" : reactUtils.colors.Cyan} />
+    <text className={`ContentText ${needsResponse || !message.viewed ? "Cyan" : "White"}`} x={25} y={150}>UTC  {convertUnixToHHMM(new Date(message.ts))}-{message.from}</text>
+    <text className={`ContentText ${needsResponse || !message.viewed ? "Cyan" : "White"}`} x={needsResponse ? 660 : 600} y={150}>{needsResponse ? "OPEN" : AcarsService.messageViewStr(message)}</text>
     {blocks.map((content, i) => <text key={i} className={`ContentText ${needsResponse ? "Lime" : "White"}`} x={10} y={180 + (i * 25)}>{content}</text>)}
     {message.respondSend ? <text className="ContentText White" x={10} y={180 + ((blocks.length + 2) * 25)}>RESPONSE HISTORY</text> : null}
     {message.respondSend ? <text className="ContentText White" x={10} y={180 + ((blocks.length + 3) * 25)}>{message.respondSend}</text> : null}
